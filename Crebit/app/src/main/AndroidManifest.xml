@@ -7,17 +7,24 @@
         android:icon="@drawable/crebit"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <activity
-            android:name="com.bitblue.crebit.SplashScreenActivity">
+        <activity android:name="com.bitblue.crebit.SplashScreenActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-
             android:name="com.bitblue.crebit.LoginActivity"
-            android:label="@string/crebitWallet">
+            android:label="@string/crebitWallet" >
+        </activity>
+        <activity
+            android:name="com.bitblue.crebit.ForgotPass"
+            android:label="@string/forgotPasswd" >
+        </activity>
+        <activity
+            android:windowSoftInputMode="adjustPan"
+            android:name="com.bitblue.crebit.SignUp"
+            android:label="@string/signupRegister" >
         </activity>
     </application>
 

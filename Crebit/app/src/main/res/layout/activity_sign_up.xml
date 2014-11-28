@@ -1,0 +1,115 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bitblue.crebit.SignUp"
+    android:background="@color/gray_cloud">
+
+    <LinearLayout
+        android:id="@+id/signUpForm"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_accType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="@string/accType"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"/>
+
+        <Spinner
+            android:id="@+id/sp_accType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/accountType"
+            android:layout_marginBottom="15dp"></Spinner>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"/>
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="340dp"
+            android:layout_height="35dp"
+            android:hint=" Enter Name "
+            android:layout_marginLeft="10dp"
+            android:imeOptions="actionNext"
+            android:singleLine="true"
+            android:background="@drawable/rounded_edit_text"
+            android:layout_marginBottom="15dp"/>
+
+        <TextView
+            android:id="@+id/tv_mobNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mobNum"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"/>
+
+        <EditText
+            android:id="@+id/et_mobNum"
+            android:layout_width="340dp"
+            android:layout_height="35dp"
+            android:hint="  Enter Mobile Number "
+            android:layout_marginLeft="10dp"
+            android:imeOptions="actionNext"
+            android:singleLine="true"
+            android:background="@drawable/rounded_edit_text"
+            android:layout_marginBottom="15dp"/>
+
+        <TextView
+            android:id="@+id/tv_passwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/passwd"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"/>
+
+        <EditText
+            android:id="@+id/et_passwd"
+            android:layout_width="340dp"
+            android:layout_height="35dp"
+            android:hint="  Enter Password "
+            android:layout_marginLeft="10dp"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:background="@drawable/rounded_edit_text"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical"
+        android:layout_below="@+id/signUpForm">
+        <Button
+            android:id="@+id/b_signUpSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Submit"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_button" />
+    </LinearLayout>
+</RelativeLayout>
