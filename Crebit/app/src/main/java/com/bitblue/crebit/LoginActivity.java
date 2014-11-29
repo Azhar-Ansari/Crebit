@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.bitblue.crebit.services.Services;
+
 
 public class LoginActivity extends ActionBarActivity implements View.OnClickListener {
 
@@ -18,6 +20,9 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setIcon(R.drawable.crebit);
         initViews();
     }
 
@@ -44,6 +49,12 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
                 if (mNumber.getText() != null && passwd.getText().toString() != null) {
                     mobileNumber = mNumber.getText().toString();
                     password = passwd.getText().toString();
+                    Intent openServies=new Intent(LoginActivity.this, Services.class);
+                    startActivity(openServies);
+                }
+                else{
+
+
                 }
                 break;
 
@@ -67,13 +78,11 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
                 if (passwd.getText().toString().equals(""))
                     passwd.setHint("  Password");
                 mNumber.setHint("");
-                mNumber.requestFocus();
                 break;
             case R.id.et_password:
                 if (mNumber.getText().toString().equals(""))
                     mNumber.setHint("  Mobile Number");
                 passwd.setHint("");
-                passwd.requestFocus();
                 break;
 
         }

@@ -1,18 +1,19 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.bitblue.crebit.ForgotPass"
-    android:background="@color/gray_cloud"
+    android:background="@color/black"
     android:orientation="vertical">
 
     <LinearLayout
+        android:id="@+id/layout_enterNumber"
         android:layout_width="wrap_content"
         android:layout_height="140dp"
         android:orientation="vertical"
-        android:background="@color/white"
+        android:background="@drawable/rounded_layout"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp">
 
@@ -44,6 +45,8 @@
             android:layout_marginLeft="10dp"
             android:imeOptions="actionDone"
             android:singleLine="true"
+            android:inputType="phone"
+            android:cursorVisible="true"
             android:background="@drawable/rounded_edit_text" />
     </LinearLayout>
 
@@ -51,7 +54,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_gravity="center_horizontal">
+        android:layout_gravity="center_vertical"
+        android:layout_below="@+id/layout_enterNumber">
 
         <Button
             android:id="@+id/b_forgotpassSubmit"
@@ -64,5 +68,19 @@
             android:background="@drawable/rounded_button" />
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_gravity="bottom"
+        android:gravity="center_horizontal"
+        android:background="@color/black"
+        android:layout_alignParentBottom="true">
 
-</LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bitBlue"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.bitblue.crebit.SignUp"
-    android:background="@color/gray_cloud">
+    android:background="@color/black">
 
     <LinearLayout
         android:id="@+id/signUpForm"
@@ -13,25 +13,28 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@color/white">
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_layout">
 
         <TextView
             android:id="@+id/tv_accType"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:text="@string/accType"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:layout_marginLeft="10dp"/>
+            android:textSize="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp" />
 
         <Spinner
             android:id="@+id/sp_accType"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:entries="@array/accountType"
-            android:layout_marginBottom="15dp"></Spinner>
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/rounded_spinner"></Spinner>
 
         <TextView
             android:id="@+id/tv_name"
@@ -39,20 +42,20 @@
             android:layout_height="wrap_content"
             android:text="@string/name"
             android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:layout_marginLeft="10dp"/>
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp" />
 
         <EditText
             android:id="@+id/et_name"
             android:layout_width="340dp"
             android:layout_height="35dp"
-            android:hint=" Enter Name "
+            android:hint="  Enter Name "
             android:layout_marginLeft="10dp"
             android:imeOptions="actionNext"
             android:singleLine="true"
             android:background="@drawable/rounded_edit_text"
-            android:layout_marginBottom="15dp"/>
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp" />
 
         <TextView
             android:id="@+id/tv_mobNum"
@@ -60,9 +63,8 @@
             android:layout_height="wrap_content"
             android:text="@string/mobNum"
             android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:layout_marginLeft="10dp"/>
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp" />
 
         <EditText
             android:id="@+id/et_mobNum"
@@ -73,7 +75,9 @@
             android:imeOptions="actionNext"
             android:singleLine="true"
             android:background="@drawable/rounded_edit_text"
-            android:layout_marginBottom="15dp"/>
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:inputType="phone" />
 
         <TextView
             android:id="@+id/tv_passwd"
@@ -81,27 +85,31 @@
             android:layout_height="wrap_content"
             android:text="@string/passwd"
             android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:layout_marginLeft="10dp"/>
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp" />
 
         <EditText
             android:id="@+id/et_passwd"
             android:layout_width="340dp"
             android:layout_height="35dp"
-            android:hint="  Enter Password "
+            android:hint=" Enter Password "
             android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
             android:imeOptions="actionDone"
             android:singleLine="true"
-            android:background="@drawable/rounded_edit_text"/>
+            android:background="@drawable/rounded_edit_text"
+            android:inputType="textPassword" />
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_gravity="center_vertical"
         android:layout_below="@+id/signUpForm">
+
         <Button
             android:id="@+id/b_signUpSubmit"
             android:layout_width="match_parent"
@@ -111,5 +119,20 @@
             android:layout_marginRight="10dp"
             android:textColor="@color/white"
             android:background="@drawable/rounded_button" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_gravity="bottom"
+        android:gravity="center_horizontal"
+        android:background="@color/black"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bitBlue"
+            android:textColor="@color/white" />
     </LinearLayout>
 </RelativeLayout>

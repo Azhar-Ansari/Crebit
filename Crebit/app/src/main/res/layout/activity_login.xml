@@ -20,20 +20,23 @@
             android:layout_marginBottom="10dp"
             android:layout_marginTop="5dp"
             android:src="@drawable/crebit" />
-        <!--    <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/crebitWallet"
-                android:textColor="@color/cool_black"
-                android:textSize="80dp" />-->
+
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="10dp">
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/existingUser"
+                android:textColor="@color/cool_black"
+                android:textSize="15dp"
+                android:layout_marginBottom="5dp"/>
 
             <EditText
                 android:id="@+id/et_mobileNumber"
@@ -43,17 +46,19 @@
                 android:background="@drawable/rounded_edit_text"
                 android:hint="  Mobile Number "
                 android:imeOptions="actionNext"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:inputType="phone"/>
 
             <EditText
                 android:id="@+id/et_password"
                 android:layout_width="250dp"
                 android:layout_height="45dp"
                 android:background="@drawable/rounded_edit_text"
-                android:hint="  Password "
+                android:hint=" Password "
                 android:layout_marginBottom="10dp"
                 android:imeOptions="actionDone"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:inputType="textPassword"/>
 
             <Button
                 android:id="@+id/b_login"
@@ -80,7 +85,14 @@
                 android:text="@string/forgotPassword"
                 android:textColor="@color/blue_ivy"
                 android:textStyle="bold" />
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="|"
+                android:textColor="@color/blue_ivy"
+                android:textSize="15dp"
+                android:gravity="center_horizontal"
+                android:layout_marginRight="20dp"/>
             <Button
                 android:id="@+id/b_signUp"
                 android:layout_width="80dp"

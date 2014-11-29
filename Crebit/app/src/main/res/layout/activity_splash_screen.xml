@@ -3,6 +3,6 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     tools:context=".SplashScreenActivity"
-    android:background="@drawable/crebit"
+    android:background="@drawable/splashscreen"
     style="@android:style/Theme.Light.NoTitleBar.Fullscreen">
     </LinearLayout>
